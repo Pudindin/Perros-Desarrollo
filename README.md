@@ -1,13 +1,31 @@
 ## README del proyecto "Perros" de Desarrollo de Software
 
-Antes de importar este repositorio, es necesario haber instalado LampStack: 
+### Instalación
 
-Primero, ingresa a la web https://bitnami.com/stack/lamp donde podrás descargar el instalador de lampstack
+Antes de importar este repositorio, es necesario haber instalado LampStack
 
-Luego, ejecuta el instalador. Esto creará una carpeta, que será la carpeta del proyecto con todos los archivos de configuración incluidos
+- Primero, ingresa a la web https://bitnami.com/stack/lamp donde podrás descargar el instalador de lampstack.
 
-Tercero, dentro de esta carpeta, en el subdirectorio /apache2 podrás encontrar otra carpeta /htdocs. Este subdirectorio debe ser reemplazado por el repositorio de git.
+- A continuación, ejecuta el instalador. Esto creará una carpeta, que será la carpeta del proyecto con todos los archivos de configuración incluidos por defecto.
 
-Cuarto, si al importar el repo en /htdocs cambia el nombre de la carpeta original, regrésalo a /htdocs. Es importante que el nombre se mantenga igual 
+- Tercero, dentro de esta carpeta, muévete a */apache2* y busca el subdirectorio que contiene los archivos html, css y js (podría ser en */htdocs*), y cuyo contenido está en este repo. 
 
+- Para clonar el repositorio en la carpeta y mantener el nombre, muévete al directorio */apache2* y ejecuta:
 
+'''
+git clone https://github.com/Pudindin/Perros-Desarrollo.git htdocs
+'''
+
+- O en caso de que los archivos no hayan estado en */htdocs*, colocar el nombre que posee. Es importante que el nombre sea el mismo que viene por defecto, para que la aplicación funcione bien.
+
+### Correr la aplicación
+
+Para correr la aplicación en tu máquina, ejecuta el archivo ejecutable (*.run) en la carpeta raíz del proyecto (creada por bitnami). Esto abrirá una ventana que te permitirá manejar los servidores e ir directo a la aplicación. Para que la página corra, debes iniciar los servidores (Web y MySql).
+
+### Creación de BD
+
+Para crear la Base de Datos, luego de ejecutar el ejecutable (*.run), seleccionar la opción *Open phpMyAdmin*. En cuanto se haya abierto la página, autenticarse con los datos personales (la contraseña es la ingresada al momento de configurar bitnami).
+
+Una vez ingresados, crear la base de datos *grupo_i* y, después, la tabla *perros*. Ahí, agregar la columna *comentario* de tipo *varchar*
+
+Además, desde la página principal, crear el usuario *iic3142* y darle privilegios sobre la base de datos creada.
