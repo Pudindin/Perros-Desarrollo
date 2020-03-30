@@ -27,6 +27,10 @@ SET time_zone = "+00:00";
 -- Table structure for table `perros`
 --
 
+CREATE DATABASE `grupo_i`;
+
+USE `grupo_i`;
+
 CREATE TABLE `perros` (
   `comentario` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
