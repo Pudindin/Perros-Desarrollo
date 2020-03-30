@@ -27,7 +27,11 @@ SET time_zone = "+00:00";
 -- Table structure for table `perros`
 --
 
+CREATE USER 'iic3143'@'localhost' IDENTIFIED BY 'iic3143';
+
 CREATE DATABASE `grupo_i`;
+
+GRANT ALL PRIVILEGES ON `grupo_i`.* TO 'iic3143'@'localhost';
 
 USE `grupo_i`;
 
